@@ -6,9 +6,10 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private int health=100;
 
+    public HealthBar healthBar;
 
     private int MAX_HEALTH = 100;
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -25,6 +26,7 @@ public class Health : MonoBehaviour
     {
         this.MAX_HEALTH=maxHealth;
         this.health=health;
+        healthBar.SetMaxHealth(health);
     }
 
     public void Damage (int amount)
@@ -35,8 +37,9 @@ public class Health : MonoBehaviour
         }
 
         this.health -= amount;
+        healthBar.SetHealth(health);
 
-        if(health<=0)
+        if (health<=0)
         {
             Die();
         }
@@ -52,10 +55,13 @@ public class Health : MonoBehaviour
         if (wouldBeOverMaxHealth)
         {
             this.health = MAX_HEALTH;
+            healthBar.SetMaxHealth(health);
+
         }
         else 
         {
             this.health += amount;
+            healthBar.SetHealth(health);
         }
 
        
