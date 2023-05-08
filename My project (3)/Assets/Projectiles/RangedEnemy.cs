@@ -9,10 +9,18 @@ public class RangedEnemy : MonoBehaviour
 
     private float timer;
     private GameObject player;
+
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+
+    public float t = 2f;
+    private bool attacking = false;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,17 +35,28 @@ public class RangedEnemy : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if (timer > 2)
+            if (timer > t)
             {
                 timer = 0;
                 shoot();
+
             }
+
+            animator.SetBool("attacking", true);
+
         }
+
+        else
+        {
+            animator.SetBool("attacking", false);
+        }
+
 
     }
 
     void shoot()
     {
+        attacking = true;
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
 
     }

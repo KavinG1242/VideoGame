@@ -29,13 +29,13 @@ public class EnemyBulletScript : MonoBehaviour
 
         if (timer > 10)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if ((other.gameObject.CompareTag("Player")) || (other.gameObject.CompareTag("Obstacle")))
         {
             Destroy(gameObject);
         }
