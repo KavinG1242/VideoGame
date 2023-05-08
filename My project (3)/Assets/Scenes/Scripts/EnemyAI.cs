@@ -17,6 +17,8 @@ public class EnemyAI : MonoBehaviour
     int currentWaypoint = 0;
     bool reachedEndOfPath=false;
 
+    private EnemyAnimator enemyAnimator;
+
     Seeker seeker;
     Rigidbody2D rb;
     // Start is called before the first frame update
@@ -24,6 +26,7 @@ public class EnemyAI : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        enemyAnimator = GetComponent<EnemyAnimator>();
 
         InvokeRepeating("UpdatePath", 0f, .5f);
         
@@ -34,6 +37,7 @@ public class EnemyAI : MonoBehaviour
         if (seeker.IsDone())
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
+            
         }
     }
 
@@ -65,7 +69,7 @@ public class EnemyAI : MonoBehaviour
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
-
+        enemyAnimator.SetMovement(force);
         rb.AddForce(force);
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
