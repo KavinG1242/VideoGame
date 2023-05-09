@@ -35,7 +35,14 @@ public class EnemyBulletScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if ((other.gameObject.CompareTag("Player")) || (other.gameObject.CompareTag("Obstacle")))
+        if (other.gameObject.CompareTag("Player"))
+        {
+
+            other.gameObject.GetComponent<Health>().MAX_HEALTH -= 10;
+            Destroy(gameObject);
+        }
+
+        else if (other.gameObject.CompareTag("Obstacle"))
         {
             Destroy(gameObject);
         }
