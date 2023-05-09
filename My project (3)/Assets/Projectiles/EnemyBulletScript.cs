@@ -38,8 +38,15 @@ public class EnemyBulletScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
 
-            other.gameObject.GetComponent<Health>().MAX_HEALTH -= 10;
-            Destroy(gameObject);
+            if( other.GetComponent<Health>()!= null)
+            {
+                Health health = other.GetComponent<Health>();
+                health.Damage(1);
+
+
+                Destroy(gameObject);
+            }
+   
         }
 
         else if (other.gameObject.CompareTag("Obstacle"))

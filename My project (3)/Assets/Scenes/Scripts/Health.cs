@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int health = 100;
+    [SerializeField] public int health = 100;
 
     public HealthBar healthBar;
 
@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
             //Heal(10);
         }
     }
-    public void SetHealth(int maxHealth, int health)
+    public void SetHealth(int maxHealth,  int health)
     {
         this.MAX_HEALTH = maxHealth;
         this.health = health;
@@ -63,7 +63,6 @@ public class Health : MonoBehaviour
             this.health += amount;
             healthBar.SetHealth(health);
         }
-
 
 
     }
