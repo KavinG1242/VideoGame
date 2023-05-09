@@ -1219,7 +1219,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.48, y: 4.484375}
+  m_Size: {x: 4.48, y: 4.493125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1317,8 +1317,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.48, y: 4.484375}
-    newSize: {x: 4.48, y: 4.484375}
+    oldSize: {x: 4.48, y: 4.493125}
+    newSize: {x: 4.48, y: 4.493125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4775,9 +4775,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 3, y: 1}
+    - - {x: 2.6673086, y: -0.29094577}
+      - {x: 2.4639368, y: 2.2011764}
+      - {x: 0.6692459, y: 0.7358657}
       - {x: 1, y: 0}
-      - {x: 3, y: -1}
 --- !u!1 &2019401825 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3523086935682377284, guid: a838629169aad214dae4b11f2f548f5a, type: 3}
@@ -4793,6 +4794,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8c22bc50a962cc4fae925cd974fc8cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2019401827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019401825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74db23f53ffd2684abc7a71c62544359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2019493846

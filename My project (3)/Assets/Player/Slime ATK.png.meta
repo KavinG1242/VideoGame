@@ -1,22 +1,46 @@
 fileFormatVersion: 2
-guid: 60fa4bfd1990ac3439d826d6cf4ceb95
+guid: 597f2ab9848b00f418096e01996a0465
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5655432736122190175
-    second: Slime ATK_0
+      213: -8527653924057897304
+    second: Pixilart Sprite Sheet (9)_0
   - first:
-      213: -6811485969057713949
-    second: Slime ATK_1
+      213: 1976174220812107478
+    second: Pixilart Sprite Sheet (9)_1
   - first:
-      213: -4026831858439016845
-    second: Slime ATK_2
+      213: -9078967074268177318
+    second: Pixilart Sprite Sheet (9)_2
   - first:
-      213: -6947228265952471756
-    second: Slime ATK_3
+      213: 9185532839000928415
+    second: Pixilart Sprite Sheet (9)_3
   - first:
-      213: -4986692557702498768
-    second: Slime ATK_4
+      213: -8359075369221688940
+    second: Pixilart Sprite Sheet (9)_4
+  - first:
+      213: 1352779000079204802
+    second: Pixilart Sprite Sheet (9)_5
+  - first:
+      213: 7511050203647399290
+    second: Pixilart Sprite Sheet (9)_6
+  - first:
+      213: -7878030387370746351
+    second: Pixilart Sprite Sheet (9)_7
+  - first:
+      213: -6414619378503866788
+    second: Pixilart Sprite Sheet (9)_8
+  - first:
+      213: -3425450731742443495
+    second: Pixilart Sprite Sheet (9)_9
+  - first:
+      213: 7628485639135092545
+    second: Pixilart Sprite Sheet (9)_10
+  - first:
+      213: -5059217750298257286
+    second: Pixilart Sprite Sheet (9)_11
+  - first:
+      213: 1864864427589435100
+    second: Pixilart Sprite Sheet (9)_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -102,23 +126,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slime ATK_0
+      name: Pixilart Sprite Sheet (9)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -132,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f59bda71c122c7e40800000000000000
-      internalID: 5655432736122190175
+      spriteID: 8a6201100ffa7a980800000000000000
+      internalID: -8527653924057897304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime ATK_1
+      name: Pixilart Sprite Sheet (9)_1
       rect:
         serializedVersion: 2
         x: 448
@@ -153,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e0f1c5999db871a0800000000000000
-      internalID: -6811485969057713949
+      spriteID: 6de3acdcbf7cc6b10800000000000000
+      internalID: 1976174220812107478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime ATK_2
+      name: Pixilart Sprite Sheet (9)_2
       rect:
         serializedVersion: 2
         x: 896
@@ -174,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37e248382c1dd18c0800000000000000
-      internalID: -4026831858439016845
+      spriteID: a5c17c26c87010280800000000000000
+      internalID: -9078967074268177318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime ATK_3
+      name: Pixilart Sprite Sheet (9)_3
       rect:
         serializedVersion: 2
         x: 1344
@@ -195,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 435995a33bc769f90800000000000000
-      internalID: -6947228265952471756
+      spriteID: f90f5553371997f70800000000000000
+      internalID: 9185532839000928415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime ATK_4
+      name: Pixilart Sprite Sheet (9)_4
       rect:
         serializedVersion: 2
         x: 1792
@@ -216,8 +228,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 036fe061a85bbcab0800000000000000
-      internalID: -4986692557702498768
+      spriteID: 491f2de6d399efb80800000000000000
+      internalID: -8359075369221688940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixilart Sprite Sheet (9)_5
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 448
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1445f455906c210800000000000000
+      internalID: 1352779000079204802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixilart Sprite Sheet (9)_6
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 448
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75578e6d5c9c3860800000000000000
+      internalID: 7511050203647399290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixilart Sprite Sheet (9)_7
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 0
+        width: 448
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e980f2a1d9ba290800000000000000
+      internalID: -7878030387370746351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixilart Sprite Sheet (9)_8
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 448
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56a0fe49a1baf6a0800000000000000
+      internalID: -6414619378503866788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixilart Sprite Sheet (9)_9
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 0
+        width: 448
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918c3e255ba5670d0800000000000000
+      internalID: -3425450731742443495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixilart Sprite Sheet (9)_10
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 0
+        width: 448
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14fd0d67543ddd960800000000000000
+      internalID: 7628485639135092545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixilart Sprite Sheet (9)_11
+      rect:
+        serializedVersion: 2
+        x: 4928
+        y: 0
+        width: 448
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a781f10d24c0ac9b0800000000000000
+      internalID: -5059217750298257286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixilart Sprite Sheet (9)_12
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 0
+        width: 448
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdefab0015451e910800000000000000
+      internalID: 1864864427589435100
       vertices: []
       indices: 
       edges: []
