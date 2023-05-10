@@ -29,6 +29,7 @@ public class Jump : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         if (jumpRequest)
         {
             //GetComponent<Rigidbody2D>().velocity += Vector2.up * jumpVelocity;
@@ -38,9 +39,25 @@ public class Jump : MonoBehaviour
             grounded = false;
         }
         else 
+        
         {
+            
+            Vector2 Right = new Vector2(0.8f,0f);
+            Vector2 Left = new Vector2(-0.8f,0f); 
+            
             Vector2 rayStart = (Vector2)transform.position + Vector2.down * playerSize.y * 0.5f;
-            grounded = Physics2D.Raycast(rayStart, Vector2.down, groundedSkin, mask);
+            Vector2 rayRight = ((Vector2)transform.position+Right) + Vector2.down * playerSize.y * 0.5f;
+            Vector2 rayLeft = ((Vector2)transform.position+Left) + Vector2.down * playerSize.y * 0.5f;
+         
+            bool groundedMid = Physics2D.Raycast(rayStart, Vector2.down, groundedSkin, mask);
+            bool groundedRight = Physics2D.Raycast(rayRight, Vector2.down, groundedSkin, mask);
+            bool groundedLeft = Physics2D.Raycast(rayLeft, Vector2.down, groundedSkin, mask);
+            
+            if ((groundedMid == true) || (groundedRight == true) || (groundedLeft == true)) 
+            {
+                grounded = true;
+            }
+
         }
     }
 }
