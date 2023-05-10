@@ -12,6 +12,8 @@ public class EnemyAI : MonoBehaviour
     public float nextWaypointDistance = 3f;
 
     public Transform enemyGFX;
+    public Transform enemyGFX1;
+    public Transform enemyGFX2;
 
     Path path;
     int currentWaypoint = 0;
@@ -82,10 +84,14 @@ public class EnemyAI : MonoBehaviour
         if (rb.velocity.x > 0.01f)
         {
             enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+            enemyGFX1.localScale = new Vector3(-1f, 1f, 1f);
+            enemyGFX2.localScale = new Vector3(-1f, 1f, 1f);
         }
         else if (rb.velocity.x <= -0.01f)
         {
             enemyGFX.localScale = new Vector3(1f, 1f, 1f);
+            enemyGFX1.localScale = new Vector3(1f, 1f, 1f);
+            enemyGFX2.localScale = new Vector3(1f, 1f, 1f);
         }
     }
 }
