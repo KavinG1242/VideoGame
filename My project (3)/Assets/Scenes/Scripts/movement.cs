@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
 
-    [SerializeField] private float speed = 3f;
+    [SerializeField] public float speed = 3f;
 
     private Rigidbody2D body;
     private Vector2 axisMovement;

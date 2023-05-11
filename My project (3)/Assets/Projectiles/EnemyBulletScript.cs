@@ -35,12 +35,12 @@ public class EnemyBulletScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if ((other.gameObject.layer == 8))
         {
 
-            if( other.GetComponent<Health>()!= null)
+            if( other.transform.parent.GetComponent<Health>()!= null)
             {
-                Health health = other.GetComponent<Health>();
+                Health health = other.transform.parent.GetComponent<Health>();
                 health.Damage(1);
 
 
