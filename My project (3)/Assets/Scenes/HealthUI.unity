@@ -1218,7 +1218,6 @@ GameObject:
   - component: {fileID: 391804985}
   - component: {fileID: 391804986}
   - component: {fileID: 391804983}
-  - component: {fileID: 391804987}
   m_Layer: 3
   m_Name: SlimePlayer
   m_TagString: Player
@@ -1324,7 +1323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350a55c3da6bb0643b76c56f8dd0e89f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
 --- !u!50 &391804980
 Rigidbody2D:
   serializedVersion: 4
@@ -1442,21 +1441,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
---- !u!114 &391804987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391804975}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22503717992a4b64aba3e69f65ca2877, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iframecount: 0.3
-  dodgespeed: 15
-  cooldown: 1.2
 --- !u!1 &500687067
 GameObject:
   m_ObjectHideFlags: 0
