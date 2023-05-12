@@ -40,7 +40,7 @@
      <Compile Include="Assets\Scenes\Scripts\Health.cs" />
      <Compile Include="Assets\Projectiles\Enemy.cs" />
      <Compile Include="Assets\Scenes\Scripts\PlayerAttack.cs" />
-     <Compile Include="Assets\Scenes\Scripts\movement.cs" />
+     <Compile Include="Assets\Scenes\Scripts\Movement.cs" />
      <Compile Include="Assets\Scenes\Scripts\PlayerAnimations.cs" />
      <Compile Include="Assets\Scenes\Scripts\Dodge.cs" />
      <Compile Include="Assets\Scenes\Scripts\AttackArea.cs" />
@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scenes\Scripts\BetterJump.cs" />
      <Compile Include="Assets\Scenes\Scripts\EnemyAttackAnimation.cs" />
      <Compile Include="Assets\Scenes\Scripts\EnemyAnimator.cs" />
+     <Compile Include="Assets\Scenes\Scripts\ParallaxEffect.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
