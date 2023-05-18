@@ -30,7 +30,8 @@ public class Dodge : MonoBehaviour
                 var = transform.parent.GetComponent<Movement>();
                 originalvelocity = var.speed;
                 var.speed = originalvelocity + dodgespeed;
-                transform.gameObject.layer = 0;
+                Physics2D.IgnoreLayerCollision(8, 6, true);
+                Physics2D.IgnoreLayerCollision(3, 6, true);
                 Invoke("End",iframecount);
                 lastdodge = currentdodge + iframecount;
             }
@@ -39,6 +40,7 @@ public class Dodge : MonoBehaviour
     void End()
     {
         var.speed = originalvelocity;
-        transform.gameObject.layer = 8;
+        Physics2D.IgnoreLayerCollision(8, 6, false);
+        Physics2D.IgnoreLayerCollision(3, 6, false);
     }
 }
