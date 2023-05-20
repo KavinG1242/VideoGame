@@ -19,27 +19,27 @@ public class PlayerAnimations : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.J))
         {
-            
+
             animator.SetBool("attacking", true);
         }
         else
         {
-           
+
             animator.SetBool("attacking", false);
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow)) 
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            animator.SetBool("Jump", true);
+            animator.SetBool("jump", true);
         }
         else
         {
 
-            animator.SetBool("Jump", false);
+            animator.SetBool("jump", false);
         }
     }
-public void SetMovement(Vector2 movement)
+    public void SetMovement(Vector2 movement)
     {
-        animator.SetFloat("Movement", Mathf.Abs(movement.x));
+        animator.SetFloat("movement", Mathf.Abs(movement.x));
     }
 
 

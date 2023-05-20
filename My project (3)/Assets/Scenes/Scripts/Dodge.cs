@@ -11,28 +11,28 @@ public class Dodge : MonoBehaviour
     [SerializeField] float cooldown = 1.2f;
     float lastdodge = 0;
     float currentdodge = 0;
-    Movement var;
-    
+    PlayerMovement var;
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             currentdodge = Time.time;
             if (currentdodge - lastdodge > cooldown)
-            {       
-                var = transform.parent.GetComponent<Movement>();
+            {
+                var = transform.parent.GetComponent<PlayerMovement>();
                 originalvelocity = var.speed;
                 var.speed = originalvelocity + dodgespeed;
                 Physics2D.IgnoreLayerCollision(8, 6, true);
                 Physics2D.IgnoreLayerCollision(3, 6, true);
-                Invoke("End",iframecount);
+                Invoke("End", iframecount);
                 lastdodge = currentdodge + iframecount;
             }
         }
