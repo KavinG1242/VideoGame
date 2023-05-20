@@ -51,7 +51,7 @@
      <Compile Include="Assets\Scenes\Scripts\Health.cs" />
      <Compile Include="Assets\Projectiles\Enemy.cs" />
      <Compile Include="Assets\Scenes\Scripts\PlayerAttack.cs" />
-     <Compile Include="Assets\Scenes\Scripts\movement.cs" />
+     <Compile Include="Assets\Scenes\Scripts\Movement.cs" />
      <Compile Include="Assets\Scenes\Scripts\PlayerAnimations.cs" />
      <Compile Include="Assets\Scenes\Scripts\Dodge.cs" />
      <Compile Include="Assets\Scenes\Scripts\AttackArea.cs" />
@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scenes\Scripts\ParallaxEffect.cs" />
      <Compile Include="Assets\Scenes\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Projectiles\EnemyBulletScript.cs" />
+     <Compile Include="Assets\Scenes\Scripts\EnemyAIGrnd.cs" />
      <Compile Include="Assets\Projectiles\EnemyData.cs" />
      <Compile Include="Assets\Scenes\Scripts\EnemyGFX.cs" />
      <Compile Include="Assets\Projectiles\RangedEnemy.cs" />
