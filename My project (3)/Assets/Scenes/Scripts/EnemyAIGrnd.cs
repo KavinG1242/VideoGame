@@ -2,11 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
-using System.Security.Cryptography;
-using System.IO;
-using System.Collections.Specialized;
-using System.Threading;
-using System.Security.AccessControl;
+
 
 public class EnemyAIGrnd : MonoBehaviour
 {
@@ -30,9 +26,9 @@ public class EnemyAIGrnd : MonoBehaviour
     private Pathfinding.Path path;
     private int currentWaypoint = 0;
     bool isGrounded = false;
-    Seeker seeker;
-    Rigidbody2D rb;
-    BoxCollider2D boxCollider;
+    private Seeker seeker;
+    private Rigidbody2D rb;
+    private BoxCollider2D boxCollider;
     [SerializeField] public LayerMask GroundLayer;
 
     public void Start()
