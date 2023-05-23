@@ -24,27 +24,30 @@ public class EnemyAIGrnd : MonoBehaviour
 
     [Header("Custom Behaviour")]
     public bool followEnabled = true;
-    public bool jumpEnabled=true;
+    public bool jumpEnabled = true;
     public bool directionLookEnabled = true;
 
     private Pathfinding.Path path;
     private int currentWaypoint = 0;
-    bool isGrounded=false;
+    bool isGrounded = false;
     Seeker seeker;
     Rigidbody2D rb;
+    BoxCollider2D boxCollider;
+    [SerializeField] public LayerMask GroundLayer;
 
     public void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
 
         InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
-       
+
     }
 
     private void FixedUpdate()
     {
-        if(TargetInDistance() && followEnabled)
+        if (TargetInDistance() && followEnabled)
         {
             PathFollow();
         }
@@ -52,7 +55,7 @@ public class EnemyAIGrnd : MonoBehaviour
 
     private void UpdatePath()
     {
-        if(followEnabled && TargetInDistance() && seeker.IsDone())
+        if (followEnabled && TargetInDistance() && seeker.IsDone())
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
@@ -60,24 +63,24 @@ public class EnemyAIGrnd : MonoBehaviour
 
     private void PathFollow()
     {
-        if(path == null)
+        if (path == null)
         {
             return;
         }
 
-        if(currentWaypoint>=path.vectorPath.Count)
+        if (currentWaypoint >= path.vectorPath.Count)
         {
             return;
         }
 
-        isGrounded = Physics2D.Raycast(transform.position, -Vector3.up, GetComponent<Collider2D>().bounds.extents.y + jumpCheckOffset);
+        isGrounded = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, GroundLayer);
 
-        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint]-rb.position).normalized;
+        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
-        if(jumpEnabled && isGrounded) 
-        { 
-            if(direction.y>jumpNodeHeightRequirement)
+        if (jumpEnabled && isGrounded)
+        {
+            if (direction.y > jumpNodeHeightRequirement)
             {
                 rb.AddForce(Vector2.up * speed * jumpModifier);
             }
@@ -85,25 +88,25 @@ public class EnemyAIGrnd : MonoBehaviour
 
         rb.AddForce(force);
 
-        float distance=Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-        if(distance < nextWaypointDistance) 
+        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+        if (distance < nextWaypointDistance)
         {
             currentWaypoint++;
         }
 
-        if(directionLookEnabled)
+        if (directionLookEnabled)
         {
-            if(rb.velocity.x>0.05f)
+            if (rb.velocity.x > 0.05f)
             {
                 transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
-            else if (rb.velocity.x< -0.05f)
+            else if (rb.velocity.x < -0.05f)
             {
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
         }
 
-        
+
 
     }
     private bool TargetInDistance()
