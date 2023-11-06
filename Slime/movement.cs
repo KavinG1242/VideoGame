@@ -49,6 +49,7 @@ public class movement : MonoBehaviour
         if (movingRight)
         {
             transform.localScale = new Vector3(1f, transform.localScale.y);
+            //uses vectors to move right for right arrow input //
         }
     }
 }
